@@ -1,0 +1,240 @@
+:root {
+    --green-dark: #1a4a3a;
+    --green-mid: #2d6e56;
+    --green-teal: #3a7d66;
+    --yellow: rgba(252, 255, 80, 1);
+    --white: rgba(255, 255, 255, 1);
+    --overlay: rgba(55, 101, 100, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    padding-top: 80px;
+}
+
+/* Nav Links */
+nav {
+    background: white;
+    padding: 20px 0;
+    width: 100%;
+    z-index: 1000000000000;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: black !important;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* ── HERO ── */
+.hero {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('./images/background.png');
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.5) brightness(0.65);
+    transform: scale(1.04);
+    animation: slowzoom 18s ease-in-out infinite alternate;
+}
+
+/* pillars row */
+.pillars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 30px;
+    animation: fadeUp 1s 0.3s ease both;
+}
+
+.pillar-item {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.85rem, 2vw, 1.05rem);
+    letter-spacing: 4px;
+    color: var(--white);
+    padding: 0 32px;
+}
+
+.pillar-divider {
+    width: 3px;
+    height: 35px;
+    background: var(--yellow);
+}
+
+/* tagline */
+.hero-tagline {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 540px;
+    margin: 0 auto 52px;
+    line-height: 1.6;
+    animation: fadeUp 1s 0.45s ease both;
+}
+
+.hero-tagline strong {
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* logos row */
+.sponsors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    animation: fadeUp 1s 0.6s ease both;
+}
+
+.sponsor-card {
+    /* background: rgba(255, 255, 255, 0.09); */
+    /* border: 1px solid rgba(255, 255, 255, 0.15); */
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    padding: 20px 32px;
+    display: flex;
+    text-align: left;
+    /* align-items: last baseline; */
+    gap: 16px;
+    min-width: 240px;
+}
+
+.sponsor-label {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.sponsor-name-pres {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: var(--yellow);
+    letter-spacing: 2px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.sponsor-sub {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 14px 20px;
+    }
+
+    .pillar-item {
+        padding: 0 16px;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .sponsor-card {
+        min-width: 200px;
+        padding: 16px 20px;
+    }
+
+    .sponsors {
+        gap: 20px;
+    }
+}
+
+
+@keyframes slowzoom {
+    from {
+        transform: scale(1.04);
+    }
+
+    to {
+        transform: scale(1.12);
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+    mix-blend-mode: multiply;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 60px 20px 80px;
+    animation: fadeUp 1s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    line-height: 1;
+    color: white;
+    text-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+    margin-bottom: 28px;
+    animation: fadeUp 1s 0.15s ease both;
+}
+
+
+
+/* Mobile Adjustments */
+
+@media (max-width: 767.98px) {
+    .hero-title{
+        font-size: 1.8rem;
+        letter-spacing: 5px;
+    }
+}
