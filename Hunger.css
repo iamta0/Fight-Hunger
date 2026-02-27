@@ -24,7 +24,7 @@ body {
 /* Navigation */
 nav {
     background: #f8f9fa;
-    padding: 10px 60px;
+    padding: 10px clamp(20px, 4vw, 60px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,11 +41,12 @@ nav {
 }
 
 .logo-icon {
-    width: 45px;
-    height: 45px;
+    width: clamp(35px, 8vw, 45px);
+    height: clamp(35px, 8vw, 45px);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .logo-icon svg {
@@ -61,23 +62,24 @@ nav {
 
 .logo-text span {
     font-weight: 700;
-    font-size: 14px;
+    font-size: clamp(12px, 2.5vw, 14px);
     color: #1a6b4a;
     letter-spacing: 0.3px;
 }
 
 .nav-links {
     display: flex;
-    gap: 35px;
+    gap: clamp(20px, 3vw, 35px);
     list-style: none;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #333;
-    font-size: 14px;
+    font-size: clamp(13px, 1.5vw, 14px);
     font-weight: 500;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -112,7 +114,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px;
+    padding: clamp(40px, 8vh, 60px) 20px;
     position: relative;
     color: #fff;
     text-align: center;
@@ -137,14 +139,14 @@ nav {
     z-index: 2;
     max-width: 1100px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 clamp(15px, 3vw, 20px);
 }
 
 .hero h1 {
-    font-size: clamp(28px, 5vw, 64px);
+    font-size: clamp(24px, 6vw, 64px);
     font-weight: 900;
-    letter-spacing: clamp(1px, 0.3vw, 3px);
-    margin-bottom: clamp(20px, 3vw, 35px);
+    letter-spacing: clamp(0.5px, 0.3vw, 3px);
+    margin-bottom: clamp(15px, 3vw, 35px);
     text-transform: uppercase;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
     line-height: 1.1;
@@ -154,30 +156,33 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(15px, 2vw, 25px);
-    margin-bottom: clamp(25px, 4vw, 45px);
+    gap: clamp(10px, 2vw, 25px);
+    margin-bottom: clamp(20px, 4vw, 45px);
     flex-wrap: wrap;
+    padding: 0 10px;
 }
 
 .pillar {
-    font-size: clamp(12px, 1.8vw, 20px);
+    font-size: clamp(11px, 2vw, 20px);
     font-weight: 700;
-    letter-spacing: clamp(0.5px, 0.2vw, 1.5px);
+    letter-spacing: clamp(0.3px, 0.2vw, 1.5px);
     text-transform: uppercase;
 }
 
 .divider {
     width: 2px;
-    height: clamp(15px, 2vw, 25px);
+    height: clamp(12px, 2vw, 25px);
     background: #f4d03f;
+    display: none;
 }
 
 .hero-subtitle {
-    font-size: clamp(13px, 1.5vw, 18px);
+    font-size: clamp(12px, 1.8vw, 18px);
     line-height: 1.6;
     max-width: 800px;
-    margin: 0 auto clamp(40px, 6vw, 70px);
+    margin: 0 auto clamp(30px, 6vw, 70px);
     font-weight: 400;
+    padding: 0 10px;
 }
 
 /* Logos Section with animation */
@@ -185,9 +190,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(20px, 3vw, 40px);
+    gap: clamp(15px, 4vw, 40px);
     flex-wrap: wrap;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .logo-section {
@@ -209,7 +214,7 @@ nav {
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-50px);
     }
     to {
         opacity: 1;
@@ -220,7 +225,7 @@ nav {
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(50px);
     }
     to {
         opacity: 1;
@@ -229,7 +234,7 @@ nav {
 }
 
 .logo-img {
-    max-width: clamp(120px, 15vw, 180px);
+    max-width: clamp(100px, 20vw, 180px);
     height: auto;
 }
 
@@ -237,29 +242,58 @@ nav {
 .president {
     background-color: #e8f4f0;
     text-align: center;
-    padding-bottom: 60px;
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 50px);
+    width: 100%;
+}
+
+.president img {
+    max-width: 100%;
+    height: auto;
+    width: clamp(250px, 40vw, 400px);
+    display: block;
+    margin: 0 auto;
+}
+
+.president-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.president-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.president-image img {
+    max-width: 100%;
+    height: auto;
+    width: clamp(250px, 40vw, 400px);
+    border-radius: 8px;
 }
 
 /* INTRODUCTION */
 .introduction-section {
     background-color: white;
-    padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 50px);
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 50px);
     width: 100%;
 }
 
 .introduction-section h1 {
     color: #1a4d4d;
-    font-size: clamp(24px, 3vw, 32px);
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: bold;
-    margin-bottom: clamp(20px, 2.5vw, 25px);
+    margin-bottom: clamp(15px, 2.5vw, 25px);
     letter-spacing: 1px;
 }
 
 .introduction-section .content-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(20px, 2.5vw, 30px);
-    margin-bottom: clamp(30px, 4vw, 40px);
+    gap: clamp(15px, 3vw, 30px);
+    margin-bottom: clamp(25px, 4vw, 40px);
 }
 
 .introduction-section .text-content {
@@ -269,7 +303,7 @@ nav {
 }
 
 .introduction-section .text-content p {
-    font-size: clamp(14px, 1.2vw, 15px);
+    font-size: clamp(13px, 1.5vw, 15px);
     line-height: 1.6;
     color: #333;
     text-align: justify;
@@ -277,7 +311,7 @@ nav {
 
 .introduction-section .image-placeholder {
     width: 100%;
-    height: clamp(200px, 25vw, 250px);
+    height: clamp(180px, 30vw, 250px);
     background-color: #e0e0e0;
     display: flex;
     align-items: center;
@@ -291,6 +325,7 @@ nav {
     max-width: 1265px;
     height: auto;
     margin-bottom: 1px;
+    display: block;
 }
 
 .introduction-section .image-placeholder img {
@@ -302,56 +337,57 @@ nav {
 /* THEMATICS Section */
 .thematic-areas-section {
     background: linear-gradient(135deg, #2d5a5a 0%, #4a7d7d 100%);
-    padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 50px);
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 50px);
     color: white;
     width: 100%;
 }
 
 .thematic-areas-section .section-header {
     text-align: center;
-    margin-bottom: clamp(30px, 4vw, 40px);
+    margin-bottom: clamp(25px, 4vw, 40px);
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .thematic-areas-section .section-header h1 {
-    font-size: clamp(26px, 3.5vw, 36px);
+    font-size: clamp(24px, 4.5vw, 36px);
     font-weight: bold;
-    margin-bottom: clamp(15px, 2vw, 20px);
-    letter-spacing: clamp(1px, 0.2vw, 2px);
+    margin-bottom: clamp(12px, 2vw, 20px);
+    letter-spacing: clamp(0.5px, 0.2vw, 2px);
     color: white;
 }
 
 .thematic-areas-section .section-header p {
-    font-size: clamp(13px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     line-height: 1.6;
     max-width: 900px;
     margin: 0 auto;
     color: #e8f4f4;
+    padding: 0 10px;
 }
 
 .thematic-areas-section .empowerment-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(30px, 5vw, 50px);
+    gap: clamp(25px, 5vw, 50px);
     align-items: center;
-    margin-top: clamp(30px, 5vw, 50px);
+    margin-top: clamp(25px, 5vw, 50px);
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .thematic-areas-section .empowerment-text h2 {
-    font-size: clamp(24px, 3vw, 32px);
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: bold;
     color: #f4e842;
-    margin-bottom: clamp(15px, 2vw, 20px);
+    margin-bottom: clamp(12px, 2vw, 20px);
     letter-spacing: 1px;
 }
 
 .thematic-areas-section .empowerment-text p {
-    font-size: clamp(13px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     line-height: 1.6;
     color: #e8f4f4;
     text-align: justify;
@@ -373,7 +409,7 @@ nav {
 /* EXHIBITION SECTION */
 .exhibition-section {
     background: linear-gradient(135deg, #3d6a6a 0%, #4a7d7d 100%);
-    padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 50px);
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 50px);
     color: white;
     width: 100%;
 }
@@ -381,22 +417,22 @@ nav {
 .exhibition-section .exhibition-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(40px, 6vw, 60px);
+    gap: clamp(30px, 6vw, 60px);
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .exhibition-section .exhibition-text h2 {
-    font-size: clamp(26px, 3.5vw, 36px);
+    font-size: clamp(24px, 4.5vw, 36px);
     font-weight: bold;
     color: #f4e842;
-    margin-bottom: clamp(20px, 2.5vw, 25px);
-    letter-spacing: clamp(1px, 0.2vw, 2px);
+    margin-bottom: clamp(15px, 2.5vw, 25px);
+    letter-spacing: clamp(0.5px, 0.2vw, 2px);
 }
 
 .exhibition-section .exhibition-text p {
-    font-size: clamp(14px, 1.2vw, 15px);
+    font-size: clamp(13px, 1.5vw, 15px);
     line-height: 1.6;
     color: #e8f4f4;
     text-align: justify;
@@ -425,14 +461,14 @@ nav {
 
 .three-columns-section .columns-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 0;
     max-width: 100%;
 }
 
 .three-columns-section .column {
-    padding: clamp(30px, 4vw, 40px) clamp(20px, 3vw, 30px);
-    min-height: 400px;
+    padding: clamp(25px, 4vw, 40px) clamp(15px, 3vw, 30px);
+    min-height: 350px;
 }
 
 .three-columns-section .column.light-green {
@@ -448,26 +484,26 @@ nav {
 }
 
 .three-columns-section .column h2 {
-    font-size: clamp(18px, 2vw, 20px);
+    font-size: clamp(17px, 2.5vw, 20px);
     font-weight: bold;
     color: #2d5a5a;
-    margin-bottom: clamp(20px, 2.5vw, 25px);
+    margin-bottom: clamp(15px, 2.5vw, 25px);
     line-height: 1.3;
 }
 
 .three-columns-section .column .item {
-    margin-bottom: clamp(15px, 2vw, 20px);
+    margin-bottom: clamp(12px, 2vw, 20px);
 }
 
 .three-columns-section .column .item h3 {
-    font-size: clamp(13px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     font-weight: bold;
     color: #2d5a5a;
     margin-bottom: 8px;
 }
 
 .three-columns-section .column .item p {
-    font-size: clamp(12px, 1.1vw, 13px);
+    font-size: clamp(11px, 1.3vw, 13px);
     line-height: 1.5;
     color: #333;
     text-align: justify;
@@ -476,7 +512,7 @@ nav {
 /* ADVOCACY SECTION */
 .advocacy-section {
     background: linear-gradient(135deg, #3d6a6a 0%, #4a7d7d 100%);
-    padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 50px);
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 50px);
     color: white;
     width: 100%;
 }
@@ -484,7 +520,7 @@ nav {
 .advocacy-section .advocacy-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: clamp(40px, 6vw, 60px);
+    gap: clamp(30px, 6vw, 60px);
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -498,21 +534,21 @@ nav {
 
 .advocacy-section .advocacy-image img {
     width: 100%;
-    max-width: clamp(200px, 25vw, 280px);
+    max-width: clamp(180px, 30vw, 280px);
     height: auto;
     border-radius: 50%;
 }
 
 .advocacy-section .advocacy-text h2 {
-    font-size: clamp(26px, 3.5vw, 36px);
+    font-size: clamp(24px, 4.5vw, 36px);
     font-weight: bold;
     color: #f4e842;
-    margin-bottom: clamp(20px, 2.5vw, 25px);
-    letter-spacing: clamp(1px, 0.2vw, 2px);
+    margin-bottom: clamp(15px, 2.5vw, 25px);
+    letter-spacing: clamp(0.5px, 0.2vw, 2px);
 }
 
 .advocacy-section .advocacy-text p {
-    font-size: clamp(14px, 1.2vw, 15px);
+    font-size: clamp(13px, 1.5vw, 15px);
     line-height: 1.6;
     color: #e8f4f4;
     text-align: justify;
@@ -591,30 +627,30 @@ nav {
 /* PARTNERSHIP & ENGAGEMENT SECTION */
 .partnership-engagement-section {
     background-color: #f5f5f5;
-    padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 50px);
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 50px);
     width: 100%;
 }
 
 .partnership-engagement-section .partnership-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(30px, 5vw, 50px);
+    gap: clamp(25px, 5vw, 50px);
     align-items: center;
-    margin-bottom: clamp(40px, 6vw, 60px);
+    margin-bottom: clamp(35px, 6vw, 60px);
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .partnership-engagement-section .partnership-text h2 {
-    font-size: clamp(24px, 3vw, 32px);
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: bold;
     color: #2d5a5a;
-    margin-bottom: clamp(15px, 2vw, 20px);
+    margin-bottom: clamp(12px, 2vw, 20px);
 }
 
 .partnership-engagement-section .partnership-text p {
-    font-size: clamp(13px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     line-height: 1.6;
     color: #333;
     text-align: justify;
@@ -622,7 +658,7 @@ nav {
 
 .partnership-engagement-section .partnership-image {
     position: relative;
-    height: clamp(220px, 30vw, 280px);
+    height: clamp(200px, 35vw, 280px);
     overflow: hidden;
 }
 
@@ -635,32 +671,33 @@ nav {
 
 .partnership-engagement-section .engagement-strategy {
     background-color: #e8f4f0;
-    padding: clamp(35px, 5vw, 50px) clamp(25px, 4vw, 40px);
+    padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px);
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .partnership-engagement-section .engagement-strategy h2 {
-    font-size: clamp(24px, 3vw, 32px);
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: bold;
     color: #2d5a5a;
-    margin-bottom: clamp(20px, 2.5vw, 25px);
+    margin-bottom: clamp(15px, 2.5vw, 25px);
     letter-spacing: 1px;
 }
 
 .partnership-engagement-section .engagement-strategy p {
-    font-size: clamp(13px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     line-height: 1.6;
     color: #333;
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 /* MULTI-CHANNEL CAMPAIGNS SECTION */
 .multi-channel-section {
     background: linear-gradient(135deg, #3d6a6a 0%, #4a7d7d 100%);
-    padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 50px);
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 50px);
     color: white;
     width: 100%;
 }
@@ -668,40 +705,40 @@ nav {
 .multi-channel-section .content-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(30px, 5vw, 50px);
+    gap: clamp(25px, 5vw, 50px);
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .multi-channel-section .text-content h2 {
-    font-size: clamp(24px, 3vw, 32px);
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: bold;
     color: #f4e842;
-    margin-bottom: clamp(20px, 3vw, 30px);
+    margin-bottom: clamp(15px, 3vw, 30px);
     letter-spacing: 1px;
 }
 
 .multi-channel-section .text-content .item {
-    margin-bottom: clamp(20px, 2.5vw, 25px);
+    margin-bottom: clamp(15px, 2.5vw, 25px);
 }
 
 .multi-channel-section .text-content .item h3 {
-    font-size: clamp(14px, 1.3vw, 15px);
+    font-size: clamp(13px, 1.6vw, 15px);
     font-weight: bold;
     color: white;
     margin-bottom: 8px;
 }
 
 .multi-channel-section .text-content .item p {
-    font-size: clamp(13px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     line-height: 1.5;
     color: #e8f4f4;
 }
 
 .multi-channel-section .image-content {
     position: relative;
-    height: clamp(220px, 30vw, 280px);
+    height: clamp(200px, 35vw, 280px);
 }
 
 .multi-channel-section .image-content img {
@@ -714,26 +751,27 @@ nav {
 /* ENGAGEMENT STRATEGY BOX */
 .engagement-strategy-box {
     background-color: #e8f4f0;
-    padding: clamp(35px, 5vw, 50px) clamp(25px, 4vw, 40px);
+    padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px);
     text-align: center;
     width: 100%;
 }
 
 .engagement-strategy-box h2 {
-    font-size: clamp(24px, 3vw, 32px);
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: bold;
     color: #2d5a5a;
-    margin-bottom: clamp(20px, 2.5vw, 25px);
+    margin-bottom: clamp(15px, 2.5vw, 25px);
     letter-spacing: 1px;
 }
 
 .engagement-strategy-box p {
-    font-size: clamp(13px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     line-height: 1.6;
     text-align: center;
     color: #333;
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 /* COLLECTIVE & THRIVING PARTNERSHIP SECTION */
@@ -744,34 +782,34 @@ nav {
 
 .collective-thriving-section .collective-partnership {
     background: linear-gradient(135deg, #3d6a6a 0%, #4a7d7d 100%);
-    padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 50px);
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 50px);
     color: white;
 }
 
 .collective-thriving-section .collective-partnership h2 {
-    font-size: clamp(24px, 3vw, 32px);
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: bold;
     text-align: center;
-    margin-bottom: clamp(40px, 5vw, 50px);
+    margin-bottom: clamp(30px, 5vw, 50px);
     letter-spacing: 1px;
 }
 
 .collective-thriving-section .collective-partnership .two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(40px, 6vw, 60px);
+    gap: clamp(30px, 6vw, 60px);
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .collective-thriving-section .collective-partnership .column h3 {
-    font-size: clamp(20px, 2.2vw, 22px);
+    font-size: clamp(18px, 2.8vw, 22px);
     font-weight: bold;
-    margin-bottom: clamp(15px, 2vw, 20px);
+    margin-bottom: clamp(12px, 2vw, 20px);
 }
 
 .collective-thriving-section .collective-partnership .column p {
-    font-size: clamp(13px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     line-height: 1.6;
     color: #e8f4f4;
     text-align: justify;
@@ -779,15 +817,15 @@ nav {
 
 .collective-thriving-section .thriving-partnership {
     background-color: #f4e842;
-    padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 50px);
+    padding: clamp(30px, 6vw, 60px) clamp(15px, 4vw, 50px);
     color: #2d5a5a;
 }
 
 .collective-thriving-section .thriving-partnership h2 {
-    font-size: clamp(24px, 3vw, 32px);
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: bold;
     text-align: center;
-    margin-bottom: clamp(40px, 5vw, 50px);
+    margin-bottom: clamp(30px, 5vw, 50px);
     letter-spacing: 1px;
     color: #2d5a5a;
 }
@@ -795,20 +833,20 @@ nav {
 .collective-thriving-section .thriving-partnership .two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(40px, 6vw, 60px);
+    gap: clamp(30px, 6vw, 60px);
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .collective-thriving-section .thriving-partnership .column h3 {
-    font-size: clamp(20px, 2.2vw, 22px);
+    font-size: clamp(18px, 2.8vw, 22px);
     font-weight: bold;
-    margin-bottom: clamp(15px, 2vw, 20px);
+    margin-bottom: clamp(12px, 2vw, 20px);
     color: #2d5a5a;
 }
 
 .collective-thriving-section .thriving-partnership .column p {
-    font-size: clamp(13px, 1.2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 14px);
     line-height: 1.6;
     color: #2d5a5a;
     text-align: justify;
@@ -818,7 +856,7 @@ nav {
 footer {
     background: linear-gradient(135deg, #1a3d2e 0%, #0d2418 100%);
     color: #fff;
-    padding: clamp(60px, 8vw, 80px) 20px 40px;
+    padding: clamp(40px, 8vw, 80px) 15px 30px;
     width: 100%;
 }
 
@@ -828,9 +866,9 @@ footer {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(40px, 6vw, 60px);
+    gap: clamp(30px, 6vw, 60px);
     align-items: center;
-    padding: 0 20px;
+    padding: 0 clamp(10px, 3vw, 20px);
 }
 
 .left-section {
@@ -838,48 +876,48 @@ footer {
 }
 
 .left-section h1 {
-    font-size: clamp(28px, 4vw, 48px);
+    font-size: clamp(24px, 5vw, 48px);
     font-weight: 700;
     color: #f4d03f;
-    margin-bottom: clamp(20px, 3vw, 30px);
+    margin-bottom: clamp(15px, 3vw, 30px);
     letter-spacing: -0.5px;
 }
 
 .left-section p {
-    font-size: clamp(14px, 1.3vw, 16px);
+    font-size: clamp(13px, 1.6vw, 16px);
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: clamp(30px, 4vw, 40px);
+    margin-bottom: clamp(25px, 4vw, 40px);
 }
 
 .contact-info {
-    margin-top: clamp(40px, 5vw, 50px);
+    margin-top: clamp(30px, 5vw, 50px);
 }
 
 .address {
-    font-size: clamp(14px, 1.3vw, 15px);
+    font-size: clamp(13px, 1.6vw, 15px);
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: clamp(20px, 2.5vw, 25px);
+    margin-bottom: clamp(15px, 2.5vw, 25px);
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: clamp(14px, 1.3vw, 15px);
+    gap: 10px;
+    font-size: clamp(13px, 1.6vw, 15px);
     color: rgba(255, 255, 255, 0.9);
 }
 
 .contact-item svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     opacity: 0.8;
     flex-shrink: 0;
 }
@@ -887,22 +925,22 @@ footer {
 .right-section {
     background: rgba(76, 104, 91, 0.4);
     backdrop-filter: blur(10px);
-    border-radius: 24px;
-    padding: clamp(35px, 5vw, 50px) clamp(30px, 4.5vw, 45px);
+    border-radius: 20px;
+    padding: clamp(25px, 5vw, 50px) clamp(20px, 4.5vw, 45px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .form-control {
     width: 100%;
-    padding: 16px 20px;
+    padding: clamp(12px, 2vw, 16px) clamp(15px, 2.5vw, 20px);
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
-    font-size: 15px;
+    font-size: clamp(13px, 1.5vw, 15px);
     color: #fff;
     transition: all 0.3s ease;
     font-family: inherit;
@@ -919,18 +957,18 @@ footer {
 }
 
 textarea.form-control {
-    min-height: 120px;
+    min-height: 100px;
     resize: vertical;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 16px;
+    padding: clamp(12px, 2vw, 16px);
     background: #fff;
     color: #2d5a45;
     border: none;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: clamp(14px, 1.6vw, 16px);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -949,17 +987,19 @@ textarea.form-control {
 
 .footer-bottom {
     max-width: 1200px;
-    margin: 60px auto 0;
-    padding-top: 30px;
+    margin: clamp(40px, 8vw, 60px) auto 0;
+    padding-top: clamp(20px, 4vw, 30px);
     text-align: center;
-    font-size: 13px;
+    font-size: clamp(11px, 1.3vw, 13px);
     color: rgba(255, 255, 255, 0.5);
 }
 
 /* Responsive Design */
+
+/* Tablet - Medium screens (768px - 968px) */
 @media (max-width: 968px) {
     nav {
-        padding: 15px 30px;
+        padding: 12px 25px;
     }
 
     .mobile-menu-toggle {
@@ -983,6 +1023,10 @@ textarea.form-control {
     .nav-links.active {
         display: flex;
     }
+    
+    .divider {
+        display: block;
+    }
 
     .three-columns-section .columns-container {
         grid-template-columns: 1fr;
@@ -991,31 +1035,35 @@ textarea.form-control {
     .three-columns-section .column {
         min-height: auto;
     }
-
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .left-section {
-        text-align: center;
-    }
-
-    .contact-item {
-        justify-content: center;
-    }
 }
 
+/* Mobile - Small screens (below 768px) */
 @media (max-width: 768px) {
+    .president {
+        padding: 30px 20px;
+    }
+
+    .president img,
+    .president-image img {
+        width: clamp(200px, 60vw, 300px);
+    }
+
     .introduction-section .content-row {
         grid-template-columns: 1fr;
     }
 
     .thematic-areas-section .empowerment-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .thematic-areas-section .empowerment-image {
+        order: -1;
     }
 
     .exhibition-section .exhibition-content {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .exhibition-section .exhibition-text h2 {
@@ -1024,6 +1072,11 @@ textarea.form-control {
 
     .advocacy-section .advocacy-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .advocacy-section .advocacy-image {
+        order: -1;
     }
 
     .advocacy-section .advocacy-text h2 {
@@ -1035,38 +1088,163 @@ textarea.form-control {
         gap: 15px;
     }
 
-    .partnership-categories-section .card {
-        padding: 25px 20px;
-    }
-
     .partnership-engagement-section .partnership-row {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .partnership-engagement-section .partnership-image {
+        height: 220px;
     }
 
     .partnership-engagement-section .partnership-image img {
-        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
     }
 
     .multi-channel-section .content-container {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .collective-thriving-section .collective-partnership .two-columns,
     .collective-thriving-section .thriving-partnership .two-columns {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .left-section {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .contact-item {
+        justify-content: center;
     }
 }
 
-@media (max-width: 640px) {
+/* Extra Small Mobile (below 480px) */
+@media (max-width: 480px) {
     nav {
-        padding: 10px 20px;
+        padding: 10px 15px;
+    }
+
+    .president {
+        padding: 25px 15px;
+    }
+
+    .president img,
+    .president-image img {
+        width: clamp(180px, 70vw, 250px);
     }
 
     .hero {
-        min-height: 100vh;
+        min-height: 90vh;
+        padding: 30px 15px;
+    }
+    
+    .hero-pillars {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .divider {
+        display: none;
     }
 
     .logos-container {
-        gap: 30px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .logo-img {
+        max-width: 140px;
+    }
+    
+    .introduction-section,
+    .thematic-areas-section,
+    .exhibition-section,
+    .advocacy-section,
+    .partnership-categories-section,
+    .partnership-engagement-section,
+    .multi-channel-section,
+    .collective-thriving-section .collective-partnership,
+    .collective-thriving-section .thriving-partnership {
+        padding: 25px 15px;
+    }
+
+    .partnership-engagement-section .partnership-image {
+        height: 180px;
+    }
+
+    .multi-channel-section .image-content {
+        height: 180px;
+    }
+    
+    .right-section {
+        padding: 25px 20px;
+    }
+    
+    .form-control {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    textarea.form-control {
+        min-height: 90px;
+    }
+}
+
+/* Extra Extra Small (below 360px) */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+    
+    .pillar {
+        font-size: 10px;
+    }
+    
+    .hero-subtitle {
+        font-size: 11px;
+    }
+    
+    .logo-img {
+        max-width: 100px;
+    }
+}
+
+/* Landscape Orientation Fix for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav,
+    footer,
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .hero,
+    .thematic-areas-section,
+    .exhibition-section,
+    .advocacy-section,
+    .multi-channel-section,
+    .collective-thriving-section .collective-partnership {
+        background: white;
+        color: black;
     }
 }
