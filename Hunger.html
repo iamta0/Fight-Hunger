@@ -4,46 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fight Hunger Nigeria - Empowerment, Advocacy, Exhibition</title>
-
-    <!-- Google Fonts -->
+    <title>Fight Hunger Nigeria</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Libre+Caslon+Display&family=Montaga&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap 5.3.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Font Awesome 6.7.2 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <!-- Bootstrap Icons 1.11.3 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- AOS Animation 2.3.4 -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- Your Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Libre+Caslon+Display&family=Montaga&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="./Hunger.css">
 </head>
 
 <body>
+
+    <!-- ── NAVBAR ── -->
     <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNavbar">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
                 <div class="logo-container">
-                    <div class="logo-icon">
-                        <img src="images/fightlogo.png" alt="" class="img-fluid">
-                    </div>
+                    <img src="images/fightlogo.png" alt="Fight Hunger Logo" style="height: 45px;" class="img-fluid">
                 </div>
             </a>
-
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars" id="menuIcon"></i>
             </button>
-
             <div class="collapse navbar-collapse" id="navContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-md-4">
                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
@@ -54,15 +39,13 @@
         </div>
     </nav>
 
-    <!-- ── HERO (untouched from project 2) ── -->
-    <section class="hero">
+    <!-- ── HERO ── -->
+    <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-tint"></div>
-
         <div class="hero-content">
             <h1 class="hero-title">FIGHT HUNGER NIGERIA</h1>
-
             <div class="pillars">
                 <span class="pillar-item">EMPOWERMENT</span>
                 <div class="pillar-divider"></div>
@@ -70,16 +53,14 @@
                 <div class="pillar-divider"></div>
                 <span class="pillar-item">EXHIBITION</span>
             </div>
-
             <p class="hero-tagline">
                 An Initiative in alignment with <strong>PRESIDENT BOLA AHMED TINUBU'S</strong>
                 Renewed Hope Agenda on Food Security
             </p>
-
             <div class="sponsors">
                 <div class="sponsor-card">
                     <div>
-                        <img src="./images/coatofarms.png" alt="" class="img-fluid">
+                        <img src="./images/coatofarms.png" alt="" style="height:60px;">
                     </div>
                     <div>
                         <div class="sponsor-label">Inspired by:</div>
@@ -87,26 +68,28 @@
                         <div class="sponsor-sub">Office of the Senior Special<br>Assistant to the President<br>(Food Security)</div>
                     </div>
                 </div>
-
                 <div class="sponsor-card">
-                    <img src="./images/logo.png" alt="Fight Hunger Resources Logo" class="img-fluid">
+                    <img src="./images/logo.png" alt="Fight Hunger Resources Logo" style="height:70px;" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ── PRESIDENT (untouched from project 2) ── -->
-    <section class="president">
-        <div class="img-container py-5 text-center">
-            <img src="./images/President.jpeg" alt="President Bola Ahmed Tinubu" class="img-fluid">
+    <!-- ── PRESIDENT ── -->
+    <section class="president" id="about">
+        <div class="container">
+            <div class="text-center py-4">
+                <img src="./images/President.jpeg" alt="President Bola Ahmed Tinubu" style="max-width:280px; border-radius:8px;" class="img-fluid">
+            </div>
         </div>
     </section>
 
-    <!-- ── INTRODUCTION (untouched from project 2) ── -->
-    <section class="introduction-section mt-5" id="about">
+    <!-- ── INTRODUCTION ── -->
+    <section class="introduction-section">
         <div class="container">
-            <div class="row align-items-center gx-5">
-                <div class="col-md-6">
+            <!-- Row 1: text left, image right -->
+            <div class="row align-items-center gx-5 mb-5">
+                <div class="col-md-6" data-aos="fade-right">
                     <h1 class="content-header">INTRODUCTION</h1>
                     <p class="text-content">
                         Food Security remains central to developmental issues across the global landscape. This is
@@ -116,16 +99,17 @@
                         sustainable development.
                     </p>
                 </div>
-                <div class="col-md-6">
-                    <img src="./images/Yam 1.jpeg" alt="" class="img-fluid">
+                <div class="col-md-6" data-aos="fade-left">
+                    <img src="./images/Yam 1.jpeg" alt="Food" class="img-fluid rounded">
                 </div>
             </div>
 
-            <div class="row align-items-center mt-5 gx-5">
-                <div class="col-md-6 order-md-1 order-2">
-                    <img src="./images/intro_img2.png" alt="" class="img-fluid">
+            <!-- Row 2: image left, text right -->
+            <div class="row align-items-center gx-5">
+                <div class="col-md-6 order-md-1 order-2" data-aos="fade-right">
+                    <img src="./images/intro_img2.png" alt="" class="img-fluid rounded">
                 </div>
-                <div class="col-md-6 order-md-2 order-1">
+                <div class="col-md-6 order-md-2 order-1" data-aos="fade-left">
                     <p class="text-content">
                         Nigeria has experienced its own unpleasant share of food insecurity thus, forming a foundational
                         framework for actualizing President Bola Tinubu's <b>RENEWED HOPE AGENDA</b> is the
@@ -140,42 +124,41 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════════════ -->
-    <!-- FROM PROJECT 1: MACHINE SECTION ONWARDS                        -->
-    <!-- ══════════════════════════════════════════════════════════════ -->
-
-    <!-- Machine Image -->
-    <div class="w-100 mt-5" style="max-height: 400px; overflow: hidden;">
-        <img src="./images/Machine.jpeg" alt="Agricultural machinery" class="img-fluid w-100" style="object-fit: cover; object-position: center; height: 100%; min-height: 300px; max-height: 400px;">
+    <!-- ── MACHINE FULL-WIDTH IMAGE ── -->
+    <div class="full-width-img">
+        <img src="./images/Machine.jpeg" alt="Agricultural machinery">
     </div>
 
-    <!-- Thematic Areas Section -->
+    <!-- ── THEMATIC AREAS – EMPOWERMENT (teal) ── -->
     <section id="pillars" class="teal-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
                 <h1 class="section-heading text-white">THEMATIC AREAS</h1>
-                <p class="lead px-lg-5">
-                    FIGHT HUNGER NIGERIA is an initiative constructed around three interconnected thematic focus areas of Empowerment, Advocacy, and Exhibition, all designed as catalyst for sustainable growth and development. Each focus area is strategically targeted at creating solutions for hunger reduction that can be scaled and integrated across the nation's diverse population, forming a tripod towards advancing the RENEWED HOPE roadmap on Food Security in Nigeria.
+                <p style="text-align:center; color:#e8f4f4; font-size:0.9rem; line-height:1.6; margin-top:0.8rem;">
+                    FIGHT HUNGER NIGERIA is an initiative constructed around three interconnected thematic focus areas of Empowerment,
+                    Advocacy, and Exhibition, all designed as catalyst for sustainable growth and development. Each focus area is
+                    strategically targeted at creating solutions for hunger reduction that can be scaled and integrated across the
+                    nation's diverse population, forming a tripod towards advancing the RENEWED HOPE roadmap on Food Security in Nigeria.
                 </p>
             </div>
 
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h2 class="accent-title fs-1 fw-bold mb-4">EMPOWERMENT</h2>
+                    <span class="accent-title">EMPOWERMENT</span>
                     <p class="text-justify">
-                        The empowerment model of the FIGHT HUNGER NIGERIA project forms a central pillar of the initiative. It focuses on equipping communities with the tools, skills, and resources necessary to become self-sufficient, improve their livelihoods, and sustainably address hunger. By focusing on education and access to resources, the program ensures that people are not only surviving hunger but are also empowered to overcome it in the long run. This approach fosters resilience, builds stronger communities, and leads to lasting changes that can transform Nigeria's food security landscape. The focus areas are as follows:
+                        The empowerment model of the FIGHT HUNGER NIGERIA project forms a central pillar of the initiative. It focuses on equipping communities with the tools, skills, and resources necessary to become self-sufficient, improve their livelihoods, and sustainably address hunger. By focusing on education and access to resources, the program ensures that people are not only surviving hunger but are also empowered to overcome it in the long run. This approach fosters resilience, builds stronger communities, and leads to lasting changes that can transform Nigeria's food security landscape.
                     </p>
                 </div>
                 <div class="col-lg-6 text-center" data-aos="fade-left">
-                    <img src="./images/Unity.jpeg" alt="Community empowerment illustration" class="circular-img">
+                    <img src="./images/Unity.jpeg" alt="Community empowerment" class="circular-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Three Columns Section 1 - Empowerment -->
+    <!-- ── THREE COLUMNS – EMPOWERMENT ── -->
     <section class="three-col-section">
-        <div class="container-fluid">
+        <div class="container-fluid px-0">
             <div class="row g-0">
                 <div class="col-lg-4" data-aos="fade-up">
                     <div class="col-card light-green">
@@ -190,7 +173,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-card yellow">
                         <h2>SKILLS DEVELOPMENT AND TRAINING</h2>
@@ -204,7 +186,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="col-card light-gray">
                         <h2>WOMEN'S DEVELOPMENT</h2>
@@ -222,20 +203,20 @@
         </div>
     </section>
 
-    <!-- Justice Image -->
-    <div class="w-100">
-        <img src="./images/Justice.jpeg" alt="Justice imagery" class="img-fluid w-100">
+    <!-- ── JUSTICE FULL-WIDTH IMAGE ── -->
+    <div class="full-width-img">
+        <img src="./images/Justice.jpeg" alt="Justice">
     </div>
 
-    <!-- Advocacy Section -->
+    <!-- ── ADVOCACY (teal) ── -->
     <section class="teal-section">
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-4 text-center" data-aos="zoom-in">
-                    <img src="./images/a6847f42917b1689acf7415fc7cd2214531c34d6.png" alt="Advocacy illustration" class="circular-img" style="max-width: 280px;">
+                    <img src="./images/Advocacy-removebg-preview.png" alt="Advocacy" class="circular-img">
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
-                    <h2 class="accent-title fs-1 fw-bold mb-4">ADVOCACY</h2>
+                    <span class="accent-title">ADVOCACY</span>
                     <p class="text-justify">
                         The advocacy component of this initiative is designed to mobilize actors as well as influence and shape public opinion. It will further strengthen social safety nets, enhance support for the farmers, and encourage investment in sustainable agriculture, particularly at the subnational and local levels. It involves participatory-driven engagement tailored to the following areas:
                     </p>
@@ -244,9 +225,9 @@
         </div>
     </section>
 
-    <!-- Three Columns Section 2 - Advocacy -->
+    <!-- ── THREE COLUMNS – ADVOCACY ── -->
     <section class="three-col-section">
-        <div class="container-fluid">
+        <div class="container-fluid px-0">
             <div class="row g-0">
                 <div class="col-lg-4" data-aos="fade-up">
                     <div class="col-card light-green">
@@ -261,7 +242,7 @@
                         </div>
                         <div class="item mb-3">
                             <h3>• Practical Solutions:</h3>
-                            <p>Identify key issues, generate practical solutions through collective thinking and proffer actionable solutions that can be deployed immediately. Linking ideas with execution, concrete initiatives capable of delivering measurable impact are entrenched.</p>
+                            <p>Identify key issues, generate practical solutions through collective thinking and proffer actionable solutions that can be deployed immediately.</p>
                         </div>
                         <div class="item">
                             <h3>• Policy Engagement:</h3>
@@ -269,7 +250,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-card yellow">
                         <h2>COMMUNITY ENGAGEMENT</h2>
@@ -283,13 +263,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="col-card light-gray">
                         <h2>YOUTH & SCHOOL OUTREACH</h2>
                         <div class="item mb-3">
                             <h3>• Action-Focused Programming:</h3>
-                            <p>Engage young people through schools, secondary and tertiary, to foster a long-term commitment to fighting hunger. Interventions are delivered through structured school and youth based platforms and are aligned with national education.</p>
+                            <p>Engage young people through schools, secondary and tertiary, to foster a long-term commitment to fighting hunger. Interventions are delivered through structured school and youth based platforms.</p>
                         </div>
                         <div class="item">
                             <h3>• Innovation:</h3>
@@ -301,33 +280,33 @@
         </div>
     </section>
 
-    <!-- Exhibition Section -->
+    <!-- ── EXHIBITION (teal) ── -->
     <section class="teal-section">
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h2 class="accent-title fs-1 fw-bold mb-4">EXHIBITION</h2>
+                    <span class="accent-title">EXHIBITION</span>
                     <p class="text-justify">
                         The exhibition component of <strong>FIGHT HUNGER NIGERIA</strong> will serve as a framework for stakeholders to harvest numerous strategic advantages in the food and agro-allied sector. Providing opportunities for showcasing innovative products, solutions, and technologies, the exhibition will also create a much-needed platform to receive practical contributions for ongoing improvement and customization in the quest to combat hunger and ensure food security.
                     </p>
                 </div>
                 <div class="col-lg-6 text-center" data-aos="fade-left">
-                    <img src="./images/Build.jpeg" alt="Exhibition booth illustration" class="circular-img circular-img-white">
+                    <img src="./images/Build.jpeg" alt="Exhibition" class="circular-img circular-img-white">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Three Columns Section 3 - Exhibition -->
+    <!-- ── THREE COLUMNS – EXHIBITION ── -->
     <section class="three-col-section">
-        <div class="container-fluid">
+        <div class="container-fluid px-0">
             <div class="row g-0">
                 <div class="col-lg-4" data-aos="fade-up">
                     <div class="col-card light-green">
                         <h2>KNOWLEDGE SHARING AND NETWORKING</h2>
                         <div class="item mb-3">
                             <h3>• Evidence Based Insights and Solutions:</h3>
-                            <p>Bring together a diverse range of stakeholders, serving as a platform for exchange of ideas, insights and practical innovations on food solution. High-quality data, curated research, with actionable intelligence on sustainable food solutions are generated thus enabling informed leadership and decision-making capacities.</p>
+                            <p>Bring together a diverse range of stakeholders, serving as a platform for exchange of ideas, insights and practical innovations on food solution. High-quality data, curated research, with actionable intelligence on sustainable food solutions are generated.</p>
                         </div>
                         <div class="item">
                             <h3>• Strategic Alliance Formation:</h3>
@@ -335,31 +314,29 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-card yellow">
                         <h2>PROVEN IMPACT</h2>
                         <div class="item mb-3">
                             <h3>• Success Stories:</h3>
-                            <p>Highlight compelling success stories from across the country that demonstrate how intentional interventions have significantly implemented food solutions. These stories cut across various contributions by the Federal, States and Local Governments as well as communities, corporate bodies, and individuals.</p>
+                            <p>Highlight compelling success stories from across the country that demonstrate how intentional interventions have significantly implemented food solutions. These stories cut across various contributions by the Federal, States and Local Governments.</p>
                         </div>
                         <div class="item">
                             <h3>• Scalable Models:</h3>
-                            <p>Key lessons learned from the success stories are distilled, highlighting how and why the efforts worked. Stakeholders are through this, inspired to adopt similar models and contribute to the collective efforts of fighting hunger.</p>
+                            <p>Key lessons learned from the success stories are distilled, highlighting how and why the efforts worked. Stakeholders are inspired to adopt similar models and contribute to the collective efforts of fighting hunger.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="col-card light-gray">
                         <h2>RECOGNITIONS AND AWARDS</h2>
                         <div class="item mb-3">
                             <h3>• Celebrating Impact, Inspiring Action:</h3>
-                            <p>Serve as a prestigious platform to honor individuals and institutions that have demonstrated outstanding commitment, innovation, and impact in advancing food security in Nigeria. Inspiring collective commitment, and positioning excellence as catalyst for accelerated progress.</p>
+                            <p>Serve as a prestigious platform to honor individuals and institutions that have demonstrated outstanding commitment, innovation, and impact in advancing food security in Nigeria.</p>
                         </div>
                         <div class="item">
                             <h3>• Turning Recognition into Results:</h3>
-                            <p>Create clear award categories guided by the SDG 2 targets, and serve both as instrument of motivation and accountability. The process is transparent as well as merit based guided by a structured nomination and evaluation framework overseen by independent panel of experts.</p>
+                            <p>Create clear award categories guided by the SDG 2 targets. The process is transparent as well as merit based guided by a structured nomination and evaluation framework overseen by independent panel of experts.</p>
                         </div>
                     </div>
                 </div>
@@ -367,79 +344,79 @@
         </div>
     </section>
 
-    <!-- Multi-Channel Campaigns -->
+    <!-- ── MULTI-CHANNEL CAMPAIGNS (teal) ── -->
     <section class="teal-section">
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h2 class="accent-title fs-1 fw-bold mb-4">MULTI-CHANNEL CAMPAIGNS</h2>
+                    <span class="accent-title">MULTI-CHANNEL CAMPAIGNS</span>
                     <div class="item mb-3">
-                        <h3>• Social Media:</h3>
+                        <h3 style="color: var(--accent-yellow); font-size:0.9rem; font-weight:700; margin-bottom:0.3rem;">• Social Media:</h3>
                         <p>Leverage platforms like Twitter, Instagram, Facebook, and TikTok to create viral campaigns, using hashtags: #FightHungerNigeria.</p>
                     </div>
                     <div class="item mb-3">
-                        <h3>• Traditional Media:</h3>
+                        <h3 style="color: var(--accent-yellow); font-size:0.9rem; font-weight:700; margin-bottom:0.3rem;">• Traditional Media:</h3>
                         <p>Partner with TV, radio stations, and newspapers to run public service announcements, interviews/snappers, and hunger-related stories.</p>
                     </div>
                     <div class="item">
-                        <h3>• Digital Tools:</h3>
+                        <h3 style="color: var(--accent-yellow); font-size:0.9rem; font-weight:700; margin-bottom:0.3rem;">• Digital Tools:</h3>
                         <p>Create websites to collect and generate interests.</p>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <div style="max-height: 280px; overflow: hidden; margin-left: -15px;">
-                        <img src="./images/Lady.jpeg" alt="Digital engagement and multi-channel communication" class="img-fluid" style="width: 100%; height: 280px; object-fit: cover; border-radius: 0 8px 8px 0;">
+                    <div style="max-height: 280px; overflow: hidden;">
+                        <img src="./images/Lady.jpeg" alt="Digital engagement" class="img-fluid" style="width:100%; height:280px; object-fit:cover; border-radius:8px;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Partnership Section -->
-    <section id="partnership" class="py-4 bg-light">
+    <!-- ── PARTNERSHIP ── -->
+    <section id="partnership" class="py-5" style="background: white;">
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
                     <h2 class="section-heading">Partnership</h2>
-                    <p class="text-justify" style="font-size: 0.9rem; line-height: 1.5;">
+                    <p class="text-justify" style="font-size:0.9rem; line-height:1.6; color:#444;">
                         Our partnership objective is to foster collaborations, opportunities and benefits. Given the magnitude of Nigeria's food security issues, partnerships are at the heart of this initiative. We recognize that meaningful progress in achieving the goals requires the combined efforts of all well-meaning stakeholders both at the public and private sector levels.
                     </p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="clip-image">
-                        <img src="./images/Shake.jpeg" alt="Business professionals shaking hands representing partnership and collaboration">
+                        <img src="./images/Shake.jpeg" alt="Partnership handshake">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Engagement Strategy -->
-    <section class="py-3" style="background-color: var(--light-green);">
+    <!-- ── ENGAGEMENT STRATEGY ── -->
+    <section class="engagement-section">
         <div class="container">
             <div class="text-center" data-aos="fade-up">
                 <h2 class="section-heading">ENGAGEMENT STRATEGY</h2>
-                <p class="px-lg-5" style="font-size: 0.9rem; line-height: 1.5;">
+                <p style="font-size:0.9rem; line-height:1.6; color:#444; max-width:900px; margin:0 auto;">
                     The project will adopt a structured and inclusive partnership engagement strategy designed to maximize collective impact and mutual benefits. The strategy emphasizes collaboration across government, public, corporate and private sectors ensuring complementary and results-oriented deliverables. Partners are identified through a comprehensive stakeholders mapping analysis process guided by competence and capabilities.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Collective Partnership -->
+    <!-- ── COLLECTIVE PARTNERSHIP (teal) ── -->
     <section class="teal-section">
         <div class="container">
             <h2 class="text-center mb-4" data-aos="fade-up">COLLECTIVE PARTNERSHIP</h2>
             <div class="row g-4">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h3 class="mb-3">Government and Public Sector</h3>
-                    <p class="text-justify" style="font-size: 0.85rem; line-height: 1.5;">
+                    <h3 class="mb-3" style="color: var(--accent-yellow); font-weight:700;">Government and Public Sector</h3>
+                    <p class="text-justify">
                         Having been inspired by the Presidency, we shall continue to undertake further engagements with the Federal, States, Local Governments and other public sector organizations in mobilizing greater support for hunger relief. Such partnerships enable strong alignment with government policies, social protection programs, and food security strategies. Governmental and other public institutions are provided the opportunities to demonstrate leadership and accountability.
                     </p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <h3 class="mb-3">Corporate and Private Sector</h3>
-                    <p class="text-justify" style="font-size: 0.85rem; line-height: 1.5;">
+                    <h3 class="mb-3" style="color: var(--accent-yellow); font-weight:700;">Corporate and Private Sector</h3>
+                    <p class="text-justify">
                         Engage corporate organizations as partners in reducing hunger. This is designed to create partnerships that combine financial support with measurable impact and meaningful recognition for sponsors, ensuring that partnerships reflect shared objectives and complementary capabilities.
                     </p>
                 </div>
@@ -447,20 +424,20 @@
         </div>
     </section>
 
-    <!-- Thriving in Partnership -->
-    <section class="py-4" style="background-color: var(--accent-yellow);">
+    <!-- ── THRIVING IN PARTNERSHIP (yellow) ── -->
+    <section class="thriving-section">
         <div class="container">
-            <h2 class="text-center mb-4" style="color: var(--primary-teal);" data-aos="fade-up">THRIVING IN PARTNERSHIP</h2>
-            <div class="row g-4">
+            <h2 class="text-center" data-aos="fade-up">THRIVING IN PARTNERSHIP</h2>
+            <div class="row g-4 mt-1">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h3 class="mb-3" style="color: var(--primary-teal); font-size: 1.1rem;">Visibility</h3>
-                    <p class="text-justify" style="color: var(--primary-teal); font-size: 0.85rem; line-height: 1.5;">
+                    <h3>Visibility</h3>
+                    <p>
                         Partners will enjoy enhanced visibility and positive brand recognition, that will be reinforced across event branding, media coverage, advocacy campaigns and public engagements.
                     </p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <h3 class="mb-3" style="color: var(--primary-teal); font-size: 1.1rem;">Corporate and Private Sector</h3>
-                    <p class="text-justify" style="color: var(--primary-teal); font-size: 0.85rem; line-height: 1.5;">
+                    <h3>Corporate and Private Sector</h3>
+                    <p>
                         The partnership delivers both strategic and social benefits, enhancing partner's reputation, influence, growth and development. While strengthening their products, services and market insights, they are able to deliver on their Corporate Social Responsibility.
                     </p>
                 </div>
@@ -468,14 +445,13 @@
         </div>
     </section>
 
-    <!-- Partnership Categories -->
-    <section class="py-4 bg-light">
+    <!-- ── PARTNERSHIP CATEGORIES ── -->
+    <section class="categories-section">
         <div class="container">
             <div class="text-center mb-4" data-aos="fade-up">
                 <h2 class="section-heading">PARTNERSHIP CATEGORIES</h2>
-                <p style="font-size: 0.9rem;">Partnerships are structured to account for the various partners' respective interests across the following categories:</p>
+                <p style="font-size:0.9rem; color:#555;">Partnerships are structured to account for the various partners' respective interests across the following categories:</p>
             </div>
-
             <div class="row g-4">
                 <div class="col-lg-6" data-aos="fade-up">
                     <div class="partnership-card teal h-100">
@@ -483,21 +459,18 @@
                         <p>Platinum partnership represents the highest level of engagement. It positions partners as strategic leaders receiving topmost-tier brand visibility across all program events and activities. This tier provides premium benefits to the partners.</p>
                     </div>
                 </div>
-
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="partnership-card yellow h-100">
                         <h3>Gold</h3>
                         <p>Gold Partnership represents a distinguished level of participation. It provides partners with top-tier engagement and visibility across most key events and activities within program. It comes with meaningful opportunities for partners to gain insights and attracts high impact benefits.</p>
                     </div>
                 </div>
-
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="partnership-card yellow h-100">
                         <h3>Silver</h3>
                         <p>Silver Partnership offers a measurable level of engagement and visibility across selected events and activities within the program. This tier is well suited for organizations seeking involvement and visibility within specific segments of the program.</p>
                     </div>
                 </div>
-
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="partnership-card teal h-100">
                         <h3>Bronze</h3>
@@ -508,36 +481,31 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ── FOOTER ── -->
     <footer id="contact" class="custom-footer">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6" data-aos="fade-right">
                     <h1>Get in touch</h1>
                     <p class="mb-4">
-                        Together we can fight hunger and win!!! FIGHT HUNGER NIGERIA is not just another "holding talks"; it is a movement, empowering futures and building a stronger Nigeria. It is a commitment to changing the narrative of hunger in our nation by giving practical solutions to the problems of hunger and promoting communities to feed themselves, leveraging the program's focus areas. This approach fosters resilience, builds stronger communities, and leads to lasting changes that can transform Nigeria's food security landscape.
+                        Together we can fight hunger and win!!! FIGHT HUNGER NIGERIA is not just another "holding talks"; it is a movement, empowering futures and building a stronger Nigeria. It is a commitment to changing the narrative of hunger in our nation by giving practical solutions to the problems of hunger and promoting communities to feed themselves, leveraging the program's focus areas.
                     </p>
-
-                    <div class="mt-4">
-                        <p class="fw-bold mb-3">
-                            410, Ikeja Plaza, 81, Mobolaji Bank Anthony<br>
-                            Way, Ikeja, Lagos
+                    <div class="mt-3">
+                        <p class="fw-bold mb-3" style="font-size:0.85rem;">
+                            410, Ikeja Plaza, 81, Mobolaji Bank Anthony Way, Ikeja, Lagos
                         </p>
-
                         <div class="contact-item">
-                            <i class="bi bi-telephone-fill"></i>
+                            <i class="fa-solid fa-phone"></i>
                             <span>(+234) 8026687300, (+234) 8033970763, (+234) 8023393290</span>
                         </div>
-
                         <div class="contact-item">
-                            <i class="bi bi-envelope-fill"></i>
+                            <i class="fa-solid fa-envelope"></i>
                             <span>info@fighthungernigeria.org</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-6" data-aos="fade-left">
-                    <div class="p-4 rounded-3" style="background: rgba(76, 104, 91, 0.4); backdrop-filter: blur(10px);">
+                    <div class="p-4 rounded-3" style="background: rgba(76,104,91,0.4); backdrop-filter: blur(10px);">
                         <form>
                             <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="Full name" required>
@@ -551,69 +519,50 @@
                             <div class="mb-3">
                                 <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
                             </div>
-                            <button type="submit" class="submit-btn w-100">Submit</button>
+                            <button type="submit" class="submit-btn">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
-
             <div class="text-center mt-5 pt-4 border-top border-secondary">
-                <p class="mb-0" style="color: rgba(255, 255, 255, 0.5);">
+                <p class="mb-0" style="color: rgba(255,255,255,0.5); font-size:0.82rem;">
                     © 2025 Fight Hunger Resources. All rights reserved.
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
+    <!-- Scroll to Top -->
     <div class="scroll-top" id="scrollTop">
-        <i class="bi bi-arrow-up"></i>
+        <i class="fa-solid fa-arrow-up"></i>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
+        AOS.init({ duration: 800, once: true, offset: 100 });
 
-        // Scroll to top button
         const scrollTop = document.getElementById('scrollTop');
-
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollTop.style.display = 'flex';
-            } else {
-                scrollTop.style.display = 'none';
-            }
+            scrollTop.style.display = window.pageYOffset > 300 ? 'flex' : 'none';
         });
-
         scrollTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    const navbarCollapse = document.querySelector('.navbar-collapse');
-                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                        bootstrap.Collapse.getInstance(navbarCollapse).hide();
+                    const navCollapse = document.querySelector('.navbar-collapse');
+                    if (navCollapse && navCollapse.classList.contains('show')) {
+                        bootstrap.Collapse.getInstance(navCollapse).hide();
                     }
                 }
             });
         });
     </script>
 </body>
-
 </html>
