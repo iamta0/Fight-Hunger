@@ -1,5 +1,5 @@
 :root {
-    --green-dark: #1a4a3a;
+    --green-dark: rgba(56, 102, 101, 1);
     --green-text: rgba(43, 93, 91, 1);
     --green-light: rgb(241, 255, 246);
     --yellow: rgba(252, 255, 80, 1);
@@ -13,10 +13,12 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: Inter;
 }
 
 /* FIX: Prevent horizontal scroll */
-html, body {
+html,
+body {
     overflow-x: hidden;
     max-width: 100vw;
 }
@@ -29,6 +31,65 @@ html, body {
 
 body {
     padding-top: 80px;
+}
+
+.fade-up,
+.fade-down,
+.fade-left,
+.fade-right,
+.roll-in-right,
+.roll-in-left {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform, opacity;
+    /* Improves browser performance */
+}
+
+/* 2. Entrance Directions */
+.fade-up {
+    transform: translateY(50px);
+}
+
+.fade-down {
+    transform: translateY(-50px);
+}
+
+.fade-left {
+    transform: translateX(-50px);
+}
+
+.fade-right {
+    transform: translateX(50px);
+}
+
+/* 3. Special "Roll-In" Animations (Perfect for your 50% radius image) */
+.roll-in-right {
+    transform: translateX(150px) rotate(180deg);
+}
+
+.roll-in-left {
+    transform: translateX(-150px) rotate(-180deg);
+}
+
+/* 4. The Trigger Class 
+   This is what the JavaScript adds when you scroll */
+.is-visible {
+    opacity: 1 !important;
+    transform: translate(0, 0) rotate(0deg) !important;
+}
+
+/* 5. Optional: Staggered Delays 
+   Add these classes in HTML to make items in a row appear one by one */
+.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.delay-2 {
+    transition-delay: 0.4s;
+}
+
+.delay-3 {
+    transition-delay: 0.6s;
 }
 
 /* Nav Links */
@@ -213,7 +274,7 @@ nav {
     letter-spacing: 6px;
     line-height: 1;
     color: white;
-    text-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 0 4px 40px rgba(0, 0, 0, 0.5); */
     margin-bottom: 28px;
     animation: fadeUp 1s 0.15s ease both;
     /* FIX: Prevent text overflow */
@@ -247,11 +308,138 @@ nav {
     padding-top: 15px;
 }
 
-/* FIX: Make images responsive */
-img {
-    max-width: 100%;
-    height: auto;
+/* Thematic Area Section */
+
+.thematic-areas {
+    padding: 60px 0;
+    background: var(--green-dark);
 }
+
+.content-title {
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.thematic-content {
+    color: var(--white);
+    font-size: 16px;
+}
+
+.empowerment {
+    color: var(--yellow);
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.empowerment-text {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+.emp-image {
+    height: 450px;
+    width: 450px;
+    float: right;
+    border-radius: 50%;
+}
+
+.focus-area {
+    font-size: 24px;
+    padding: 60px 120px;
+    text-align: left;
+}
+
+.focus-area:nth-child(1),
+.focus-area:nth-child(3) {
+    background-color: var(--green-light);
+}
+
+.focus-area:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+.focus-area-list {
+    font-size: 16px;
+    margin-top: 4rem;
+}
+
+.focus-area-title {
+    color: rgba(31, 109, 61, 1);
+    font-weight: 800;
+    font-size: 32px;
+}
+
+
+/* Advocacy Section  */
+
+.advocacy-section {
+    padding: 60px 0px;
+    background: var(--green-dark);
+}
+
+.advocacy-title {
+    color: var(--yellow);
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.advocacy-text {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+.advocacy-focus-area {
+    font-size: 24px;
+    padding: 60px 120px 0px 120px;
+    text-align: left;
+}
+
+.advocacy-focus-area:nth-child(1),
+.advocacy-focus-area:nth-child(3) {
+    background-color: var(--green-light);
+}
+
+.advocacy-focus-area:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+.advocacy-focus-area-list {
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+.advocacy-focus-area-title {
+    color: rgba(31, 109, 61, 1);
+    font-weight: 800;
+    font-size: 32px;
+}
+
+
+/* Exhibition Section */
+
+.exhibition-section {
+    padding: 60px 0px;
+    background: var(--green-dark);
+}
+
+.exhibition-title {
+    color: var(--yellow);
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.exhibition-text {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
 
 /* Mobile Adjustments */
 
@@ -260,101 +448,70 @@ img {
         font-size: 1.8rem;
         letter-spacing: 5px;
     }
-    
+
     /* FIX: Better pillar spacing on mobile */
     .pillar-item {
         font-size: 16px;
         padding: 0 16px;
         letter-spacing: 2px;
     }
-    
+
     .pillar-divider {
         width: 2px;
         height: 28px;
     }
-    
+
     /* FIX: Better tagline on mobile */
     .hero-tagline {
         font-size: 16px;
     }
-    
+
     /* FIX: Stack sponsor cards on mobile */
     .sponsors {
         gap: 24px;
     }
-    
+
     .sponsor-card {
         min-width: auto;
         width: 100%;
         max-width: 350px;
     }
-    
+
     /* FIX: Better text sizing on mobile */
     .content-header {
         font-size: 28px;
     }
-    
+
     .text-content {
         font-size: 18px;
     }
-}
 
-/* FIX: Extra small screens */
-@media (max-width: 575.98px) {
-    body {
-        padding-top: 70px;
+    .emp-image {
+        height: 300px;
+        width: 300px;
     }
-    
-    nav {
-        padding: 15px 0;
-    }
-    
-    .hero-title {
-        font-size: 1.5rem;
-        letter-spacing: 3px;
-    }
-    
-    .pillar-item {
-        font-size: 14px;
-        padding: 0 12px;
-    }
-    
-    .pillar-divider {
-        height: 24px;
-    }
-    
-    .hero-tagline {
-        font-size: 14px;
-    }
-    
-    .sponsor-name-pres {
-        font-size: 24px;
-    }
-    
-    .sponsor-sub {
-        font-size: 10px;
-    }
-}
 
-/* FIX: Very small screens */
-@media (max-width: 399.98px) {
-    .hero-title {
-        font-size: 1.3rem;
-        letter-spacing: 2px;
+    .focus-area {
+        padding: 60px 60px;
     }
-    
-    .pillar-item {
-        font-size: 12px;
-        padding: 0 10px;
-        letter-spacing: 1px;
+
+    .focus-area-title {
+        font-size: 25px;
     }
-    
-    .pillar-divider {
-        width: 2px;
-        height: 20px;
+
+    .focus-area-list {
+        margin-top: 2rem;
     }
-    
-    .hero-tagline {
-        font-size: 13px;
+
+    .advocacy-focus-area {
+        padding: 60px 60px;
+    }
+
+    .advocacy-focus-area-title {
+        font-size: 25px;
+    }
+
+    .advocacy-focus-area-list {
+        margin-top: 2rem;
     }
 }
