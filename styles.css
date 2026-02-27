@@ -1,7 +1,7 @@
 :root {
     --green-dark: #1a4a3a;
-    --green-mid: #2d6e56;
-    --green-teal: #3a7d66;
+    --green-text: rgba(43, 93, 91, 1);
+    --green-light: rgb(241,255,246);
     --yellow: rgba(252, 255, 80, 1);
     --white: rgba(255, 255, 255, 1);
     --overlay: rgba(55, 101, 100, 1);
@@ -16,7 +16,7 @@
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -228,7 +228,32 @@ nav {
     animation: fadeUp 1s 0.15s ease both;
 }
 
+/* Preseident Section  */
 
+.president{
+    min-height: 60vh;
+    background: var(--green-light);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Intoduction Section */
+
+.content-header{
+    color: var(--green-text);
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.text-content{
+    color: black;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-family: Inter;
+    padding-top: 15px;
+}
 
 /* Mobile Adjustments */
 
