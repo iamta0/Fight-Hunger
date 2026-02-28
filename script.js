@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+document.getElementById('year').innerText = new Date().getFullYear();
+
     const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('.fade-up, .fade-right,.fade-left, .fade-down, .roll-in-right, .roll-in-left');
     elements.forEach(el => observer.observe(el));
 });
+
 
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyzCMV6K8u8oHjk9fB6lAJUaJeBiEosH9zkgrQH9RJtrP2L9aNNl_r_-IBQYcICTzNsPA/exec'; 

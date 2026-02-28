@@ -638,7 +638,7 @@ nav {
 .custom-footer {
     background: linear-gradient(135deg, #1a3d2e 0%, #0d2418 100%);
     color: white;
-    padding: 3.5rem 0 1.5rem;
+    padding: 60px 0px;
 }
 
 .custom-footer h1 {
@@ -649,8 +649,8 @@ nav {
 }
 
 .custom-footer p {
-    font-size: 0.85rem;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .custom-footer .form-control {
